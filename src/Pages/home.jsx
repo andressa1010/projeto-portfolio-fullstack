@@ -1,0 +1,49 @@
+import React, { useEffect, useState } from "react";
+import api from "../Services/api";
+import { Descricao, Imagem, LinkProjeto, ListaProjetos, NomeProjeto, Projeto, ProjetosContainer, Titulo } from "../Styles/styled";
+import Header from "../components/header";
+import Sobre from "../components/sobre";
+import Tecnologias from "../components/tecnologias";
+import Contato from "../components/contato";
+
+const Home = () => {
+  const [projetos, setProjetos] = useState([]);
+
+  useEffect(() => {
+    async function buscarProjetos() {
+      const resposta = await api.get("/api/portfolio");
+      setProjetos(resposta.data);
+    }
+
+    buscarProjetos();
+  }, []);
+
+  return (
+    <>
+    <Header/>
+    <Sobre/>
+    <ProjetosContainer>
+      <Titulo>Meus Projetos</Titulo>
+      <ListaProjetos>
+        {projetos.map((projeto) => (
+          <Projeto key={projeto.id}>
+            <NomeProjeto>{projeto.nome}</NomeProjeto>
+            <Imagem src={`http://localhost:3001${projeto.imagem}`} alt={projeto.nome} />
+         
+            <Descricao>{projeto.descricao}</Descricao>
+            <LinkProjeto href={projeto.link} target="_blank" rel="noopener noreferrer">
+              Ver Projeto
+            </LinkProjeto>
+          </Projeto>
+        ))}
+      </ListaProjetos>
+    </ProjetosContainer>
+      
+     <Tecnologias/>
+     <Contato/>
+     
+    </>
+  );
+};
+
+export default Home;
