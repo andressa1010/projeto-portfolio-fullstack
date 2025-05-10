@@ -28,7 +28,7 @@ const Home = () => {
         {projetos.map((projeto) => (
           <Projeto key={projeto.id}>
             <NomeProjeto>{projeto.nome}</NomeProjeto>
-            <Imagem src={`http://localhost:3001${projeto.imagem}`} alt={projeto.nome} />
+            <Imagem src={`https://portfolio-backend-khf0.onrender.com${projeto.imagem}`} alt={projeto.nome} />
          
             <Descricao>{projeto.descricao}</Descricao>
             <LinkProjeto href={projeto.link} target="_blank" rel="noopener noreferrer">
