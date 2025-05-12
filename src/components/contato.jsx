@@ -46,7 +46,8 @@ export default function Contato() {
     <Container>
       <Titulo>Entre em Contato</Titulo>
       <Links>
-        <Botao href="https://wa.me/5511986414262" target="_blank" rel="noopener noreferrer">
+        <Botao
+         href="https://wa.me/5511986414262" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp /> WhatsApp
         </Botao>
         <Botao href="https://www.linkedin.com/in/andressa-nunes-silva/" target="_blank" rel="noopener noreferrer">
