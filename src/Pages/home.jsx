@@ -5,9 +5,10 @@ import Header from "../components/header";
 import Sobre from "../components/sobre";
 import Tecnologias from "../components/tecnologias";
 import Contato from "../components/contato";
+import Projetos from "../components/projeto";
 
 const Home = () => {
-  const [projetos, setProjetos] = useState([]);
+  /*const [projetos, setProjetos] = useState([]);
 
   useEffect(() => {
     async function buscarProjetos() {
@@ -16,28 +17,13 @@ const Home = () => {
     }
 
     buscarProjetos();
-  }, []);
+  }, []);*/
 
   return (
     <>
     <Header/>
     <Sobre/>
-    <ProjetosContainer>
-      <Titulo>Meus Projetos</Titulo>
-      <ListaProjetos>
-        {projetos.map((projeto) => (
-          <Projeto key={projeto.id}>
-            <NomeProjeto>{projeto.nome}</NomeProjeto>
-            <Imagem src={`https://portfolio-backend-khf0.onrender.com${projeto.imagem}`} alt={projeto.nome} />
-         
-            <Descricao>{projeto.descricao}</Descricao>
-            <LinkProjeto href={projeto.link} target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </LinkProjeto>
-          </Projeto>
-        ))}
-      </ListaProjetos>
-    </ProjetosContainer>
+    <Projetos/>
       
      <Tecnologias/>
      <Contato/>
