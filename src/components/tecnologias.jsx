@@ -51,6 +51,9 @@ const Item = styled.div`
     font-size: 1rem;
   }
 
+  @media (max-width: 360px){
+    width: 130px;
+  }
 `;
 
 export default function Tecnologias() {
