@@ -37,7 +37,7 @@ const meusProjetos = [
   },
   {
     id: 4,
-    nome: "Agendamnetos Borcelle",
+    nome: "Agendamentos Borcelle",
     imagem: "/projeto-borcelle.jpg",
     descricao:
       "Sistema de agendamentos criado para o salão de beleza Borcelle. Fui responsável por toda a estrutura da aplicação, desde o back-end até o front-end. A API foi desenvolvida com Node.js, Express, Prisma ORM e banco de dados MongoDB. No front-end, utilizei React JS, React Router DOM, Axios e styled-components. O sistema permite agendamentos com data e hora, cadastro de clientes e serviços, tudo com uma interface responsiva e moderna, voltada para facilitar o dia a dia do salão.",
