@@ -59,6 +59,13 @@ const meusProjetos = [
       "Site institucional desenvolvido para minha cabeleireira, com design leve, elegante e funcional. Utilizei React JS com React Router DOM e styled-components para garantir uma experiência fluida e responsiva. O projeto conta com integração ao WhatsApp para agendamentos, mapa de localização e apresentação dos serviços. Ideal para negócios locais que buscam presença digital.",
     link: "https://studiograce.netlify.app/",
   },
+   {
+    id: 7,
+    nome:"Hamburgueria Online",
+    imagem:"/projeto-hamburgueria.jpg",
+    descricao:"Projeto desenvolvido utilizando React, Vite e React Router DOM, simulando uma hamburgueria online. O usuário pode navegar entre as páginas, adicionar produtos ao carrinho, visualizar o resumo do pedido e finalizar a compra diretamente pelo WhatsApp. O projeto também conta com um layout responsivo, proporcionando uma ótima experiência tanto no desktop quanto no mobile.",
+    link:"https://hamburgueriaonline.netlify.app/"
+   }
 ];
 
 const Projetos = () => {
